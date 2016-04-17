@@ -8,8 +8,9 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController,UITextFieldDelegate {
 
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtUserName: UITextField!
     
@@ -36,6 +37,11 @@ class LoginViewController: UIViewController {
 
         let controllers = [explore,guests,toDo,profile]
         tabBarController.viewControllers = controllers
+        
+        let theTap = UITapGestureRecognizer(target: self, action: "scrollViewTapped:")
+        self.imageView.addGestureRecognizer(theTap)
+        
+
         
         
         
@@ -66,6 +72,8 @@ class LoginViewController: UIViewController {
     }
     
     
+    
+    
     @IBAction func onGoogleSignIn(sender: UIButton) {
         
         self.googleAuthenticate()
@@ -84,7 +92,9 @@ class LoginViewController: UIViewController {
         self.checkAuthentication()
     }
     
-    
+    func scrollViewTapped(recognizer: UIGestureRecognizer) {
+        self.view.endEditing(true)
+    }
     
     func configureUI(){
         
@@ -99,6 +109,13 @@ class LoginViewController: UIViewController {
        // self.outletSignIn.setTitleColor(AppSetting.sharedInstance.fuchsiaColor, forState: UIControlState.Normal)
         
     }
+    
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+        
+    }
+    
     
     func checkAuthentication(){
         

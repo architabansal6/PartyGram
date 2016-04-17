@@ -55,7 +55,7 @@ class NameListViewController: UIViewController,UITableViewDataSource,UITableView
             self.imageView.image = UIImage(named: "Anniversary")
         }
         if self.type == "Cocktail"{
-            self.imageView.image = UIImage(named: "Cocktail")
+            self.imageView.image = UIImage(named: "CockTail")
         }
         if self.type == "Farewell"{
             self.imageView.image = UIImage(named: "Farewell")

@@ -12,6 +12,7 @@ import UIKit
 class ExploreViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
     
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var headingLabel: UILabel!
     
     @IBOutlet weak var exploreTableView: UITableView!
@@ -27,12 +28,17 @@ class ExploreViewController: UIViewController,UITableViewDataSource,UITableViewD
         self.exploreTableView.dataSource = self
         self.exploreTableView.delegate = self
         
+    
+        
         self.headingLabel.numberOfLines = 0
         self.headingLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
 
         
         
         self.getAllFeeds()
+        self.activityIndicator.hidden = false
+        self.activityIndicator.startAnimating()
+    
         
         
         
@@ -133,6 +139,8 @@ class ExploreViewController: UIViewController,UITableViewDataSource,UITableViewD
                     dispatch_async(dispatch_get_main_queue(), {
                       //  self.plotTouristSpots(json!)
                         self.feedArray = self.giveUniqueArray(self.feedArray)
+                        self.activityIndicator.hidden = true
+                        self.activityIndicator.stopAnimating()
                         
                         self.exploreTableView.reloadData()
                         

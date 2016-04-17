@@ -12,7 +12,7 @@ class UploadViewController: UIViewController,UIWebViewDelegate{
 
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    var uploadUrl = "http://172.20.172.157:3000/loginpage"
+    var uploadUrl = "http://172.20.172.157:3000/uploadForm"
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadpage()
@@ -51,7 +51,7 @@ class UploadViewController: UIViewController,UIWebViewDelegate{
         
         if navigationType == UIWebViewNavigationType.FormSubmitted{
         
-           // self.dismissViewControllerAnimated(true, completion: nil)
+            self.dismissViewControllerAnimated(true, completion: nil)
         }
         
         return true

@@ -116,16 +116,6 @@
                                     <action selector="OnSignIn:" destination="qq5-4V-agd" eventType="touchUpInside" id="sW4-F5-moG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65G-1d-7W1">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="177" y="465" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="onGoogleSignIn:" destination="qq5-4V-agd" eventType="touchUpInside" id="xZX-IV-rAA"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -145,7 +135,7 @@
                             <constraint firstItem="bK8-fd-dJf" firstAttribute="leading" secondItem="Hlf-Iw-P5v" secondAttribute="leading" constant="16" id="SRQ-jJ-8jh">
                                 <variation key="widthClass=compact" constant="8"/>
                             </constraint>
-                            <constraint firstItem="EOC-gN-9eY" firstAttribute="top" secondItem="QQa-Bh-FG7" secondAttribute="bottom" constant="231" id="X5E-zm-M5I"/>
+                            <constraint firstItem="EOC-gN-9eY" firstAttribute="top" secondItem="QQa-Bh-FG7" secondAttribute="bottom" constant="187" id="X5E-zm-M5I"/>
                             <constraint firstAttribute="trailing" secondItem="3fF-g0-lLE" secondAttribute="trailing" constant="16" id="XXj-p1-Kip"/>
                             <constraint firstAttribute="trailing" secondItem="wVY-cG-p4d" secondAttribute="trailing" id="f2A-AX-f7d"/>
                             <constraint firstItem="3fF-g0-lLE" firstAttribute="leading" secondItem="Hlf-Iw-P5v" secondAttribute="leading" constant="16" id="i0T-Ku-Cpw"/>
@@ -161,7 +151,6 @@
                                 <exclude reference="Amv-1S-cLG"/>
                                 <exclude reference="3fF-g0-lLE"/>
                                 <exclude reference="bK8-fd-dJf"/>
-                                <exclude reference="65G-1d-7W1"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="yhW-XY-PI8"/>
@@ -193,7 +182,6 @@
                                 <include reference="Amv-1S-cLG"/>
                                 <include reference="3fF-g0-lLE"/>
                                 <include reference="bK8-fd-dJf"/>
-                                <include reference="65G-1d-7W1"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="yhW-XY-PI8"/>
@@ -219,7 +207,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="googleSignInButton" destination="65G-1d-7W1" id="4bS-5B-p34"/>
+                        <outlet property="imageView" destination="wVY-cG-p4d" id="1Uf-62-rXI"/>
                         <outlet property="outletSignIn" destination="bK8-fd-dJf" id="Ldz-cT-kk5"/>
                         <outlet property="txtPassword" destination="Mu3-FN-Iib" id="4aQ-Bl-I0P"/>
                         <outlet property="txtUserName" destination="EOC-gN-9eY" id="FDo-de-GxV"/>

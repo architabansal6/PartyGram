@@ -17,6 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="hxe-zC-gWh">
+                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="dTo-0D-7Fm">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
@@ -58,6 +63,7 @@
                         <constraints>
                             <constraint firstItem="8pe-tc-fil" firstAttribute="top" secondItem="lMe-XL-cIo" secondAttribute="bottom" constant="8" id="1QJ-QW-0sg"/>
                             <constraint firstAttribute="trailing" secondItem="dTo-0D-7Fm" secondAttribute="trailing" id="2ac-DX-XyV"/>
+                            <constraint firstItem="hxe-zC-gWh" firstAttribute="centerX" secondItem="sQ0-cG-lif" secondAttribute="centerX" id="75W-sW-gNl"/>
                             <constraint firstItem="hpv-G9-3La" firstAttribute="top" secondItem="8pe-tc-fil" secondAttribute="bottom" constant="16" id="9Mh-gJ-Y91"/>
                             <constraint firstItem="dTo-0D-7Fm" firstAttribute="top" secondItem="sQ0-cG-lif" secondAttribute="top" id="9Pu-wb-6Ww"/>
                             <constraint firstItem="dTo-0D-7Fm" firstAttribute="leading" secondItem="sQ0-cG-lif" secondAttribute="leading" id="DQA-ck-TQi"/>
@@ -67,11 +73,13 @@
                             <constraint firstAttribute="trailing" secondItem="hpv-G9-3La" secondAttribute="trailing" constant="16" id="gu9-k6-MS0"/>
                             <constraint firstItem="hpv-G9-3La" firstAttribute="top" secondItem="lMe-XL-cIo" secondAttribute="bottom" constant="68" id="pRc-8X-7h0"/>
                             <constraint firstItem="144-xo-9Ho" firstAttribute="top" secondItem="dTo-0D-7Fm" secondAttribute="bottom" id="qwz-6a-wJV"/>
+                            <constraint firstItem="hxe-zC-gWh" firstAttribute="centerY" secondItem="sQ0-cG-lif" secondAttribute="centerY" id="rvU-G3-nhg"/>
                             <constraint firstAttribute="trailing" secondItem="8pe-tc-fil" secondAttribute="trailing" constant="16" id="vGm-kg-kDF"/>
                             <constraint firstItem="hpv-G9-3La" firstAttribute="leading" secondItem="sQ0-cG-lif" secondAttribute="leading" constant="16" id="xRi-bQ-avN"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="hxe-zC-gWh"/>
                                 <exclude reference="dTo-0D-7Fm"/>
                                 <exclude reference="hpv-G9-3La"/>
                                 <exclude reference="8pe-tc-fil"/>
@@ -88,12 +96,15 @@
                                 <exclude reference="gu9-k6-MS0"/>
                                 <exclude reference="pRc-8X-7h0"/>
                                 <exclude reference="xRi-bQ-avN"/>
+                                <exclude reference="75W-sW-gNl"/>
+                                <exclude reference="rvU-G3-nhg"/>
                                 <exclude reference="XbA-BM-CZg"/>
                                 <exclude reference="qwz-6a-wJV"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="hxe-zC-gWh"/>
                                 <include reference="dTo-0D-7Fm"/>
                                 <include reference="hpv-G9-3La"/>
                                 <include reference="8pe-tc-fil"/>
@@ -110,12 +121,15 @@
                                 <include reference="gu9-k6-MS0"/>
                                 <include reference="pRc-8X-7h0"/>
                                 <include reference="xRi-bQ-avN"/>
+                                <include reference="75W-sW-gNl"/>
+                                <include reference="rvU-G3-nhg"/>
                                 <include reference="XbA-BM-CZg"/>
                                 <include reference="qwz-6a-wJV"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="hxe-zC-gWh" id="rWB-sZ-mVM"/>
                         <outlet property="exploreTableView" destination="hpv-G9-3La" id="cFy-aU-Ngf"/>
                         <outlet property="headingLabel" destination="8pe-tc-fil" id="s8Q-Kh-c98"/>
                     </connections>
@@ -224,7 +238,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What kind of party do you want to explore?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRa-Tf-yrI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here's what we found.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRa-Tf-yrI">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="CzW-VI-Qwz"/>
