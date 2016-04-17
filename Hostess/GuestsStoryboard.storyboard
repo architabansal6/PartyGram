@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Guests View Controller-->
+        <scene sceneID="6ve-x2-VC1">
+            <objects>
+                <viewController storyboardIdentifier="Guests" id="Uao-zM-wFx" customClass="GuestsViewController" customModule="Hostess" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vbn-in-Ebu"/>
+                        <viewControllerLayoutGuide type="bottom" id="2RJ-6G-oqz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KYc-Zy-zr5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="Giy-bj-OSI">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="GuestTableViewCell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e4p-Mf-YlG">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GuestTableViewCell" rowHeight="48" id="AMI-i4-J2u" customClass="GuestsTableViewCell" customModule="Hostess" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AMI-i4-J2u" id="53A-03-54u">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="47.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mr Agarwal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XmG-L1-Z7B">
+                                                    <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="x5O-3r-1Ar"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="x5O-3r-1Ar"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="16" y="9" width="208" height="30"/>
+                                                        <mask key="constraints">
+                                                            <include reference="x5O-3r-1Ar"/>
+                                                        </mask>
+                                                    </variation>
+                                                </textField>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5fM-Fo-utr">
+                                                    <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="183" y="8" width="51" height="31"/>
+                                                    </variation>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5fM-Fo-utr" firstAttribute="leading" secondItem="XmG-L1-Z7B" secondAttribute="trailing" constant="10" id="AgV-od-GV6"/>
+                                                <constraint firstItem="XmG-L1-Z7B" firstAttribute="leading" secondItem="53A-03-54u" secondAttribute="leading" constant="16" id="C1J-yN-Dsw"/>
+                                                <constraint firstAttribute="trailing" secondItem="XmG-L1-Z7B" secondAttribute="trailing" constant="16" id="G25-dc-Xfk"/>
+                                                <constraint firstAttribute="bottom" secondItem="5fM-Fo-utr" secondAttribute="bottom" constant="8.5" id="JgZ-oX-pG1"/>
+                                                <constraint firstAttribute="trailing" secondItem="5fM-Fo-utr" secondAttribute="trailing" constant="8" id="QFz-3s-X4b"/>
+                                                <constraint firstItem="XmG-L1-Z7B" firstAttribute="top" secondItem="53A-03-54u" secondAttribute="top" constant="9" id="WZf-Lx-D2D"/>
+                                                <constraint firstItem="5fM-Fo-utr" firstAttribute="top" secondItem="53A-03-54u" secondAttribute="top" constant="8" id="gl0-VO-PTH"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="XmG-L1-Z7B"/>
+                                                    <exclude reference="5fM-Fo-utr"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="C1J-yN-Dsw"/>
+                                                    <exclude reference="G25-dc-Xfk"/>
+                                                    <exclude reference="WZf-Lx-D2D"/>
+                                                    <exclude reference="AgV-od-GV6"/>
+                                                    <exclude reference="JgZ-oX-pG1"/>
+                                                    <exclude reference="QFz-3s-X4b"/>
+                                                    <exclude reference="gl0-VO-PTH"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="XmG-L1-Z7B"/>
+                                                    <include reference="5fM-Fo-utr"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="C1J-yN-Dsw"/>
+                                                    <include reference="G25-dc-Xfk"/>
+                                                    <include reference="WZf-Lx-D2D"/>
+                                                    <exclude reference="AgV-od-GV6"/>
+                                                    <include reference="JgZ-oX-pG1"/>
+                                                    <include reference="QFz-3s-X4b"/>
+                                                    <include reference="gl0-VO-PTH"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="guestsSwitch" destination="5fM-Fo-utr" id="otA-X6-D0W"/>
+                                            <outlet property="txtToDoName" destination="XmG-L1-Z7B" id="42K-Z5-Dq8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Giy-bj-OSI" firstAttribute="leading" secondItem="KYc-Zy-zr5" secondAttribute="leading" id="3dp-GB-F7a"/>
+                            <constraint firstItem="Giy-bj-OSI" firstAttribute="top" secondItem="KYc-Zy-zr5" secondAttribute="top" id="5Jf-85-P0l"/>
+                            <constraint firstItem="e4p-Mf-YlG" firstAttribute="top" secondItem="vbn-in-Ebu" secondAttribute="bottom" constant="64" id="9Yx-Jt-k2b"/>
+                            <constraint firstAttribute="trailing" secondItem="e4p-Mf-YlG" secondAttribute="trailing" constant="16" id="BcB-1D-6Fh"/>
+                            <constraint firstAttribute="trailing" secondItem="Giy-bj-OSI" secondAttribute="trailing" id="Brk-eb-ayP"/>
+                            <constraint firstItem="2RJ-6G-oqz" firstAttribute="top" secondItem="Giy-bj-OSI" secondAttribute="bottom" id="mDi-yK-Jj9"/>
+                            <constraint firstItem="e4p-Mf-YlG" firstAttribute="leading" secondItem="KYc-Zy-zr5" secondAttribute="leading" constant="16" id="nIS-y8-3UJ"/>
+                            <constraint firstItem="2RJ-6G-oqz" firstAttribute="top" secondItem="e4p-Mf-YlG" secondAttribute="bottom" constant="44" id="xN0-7k-2hq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Giy-bj-OSI"/>
+                                <exclude reference="e4p-Mf-YlG"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="mDi-yK-Jj9"/>
+                                <exclude reference="xN0-7k-2hq"/>
+                                <exclude reference="3dp-GB-F7a"/>
+                                <exclude reference="5Jf-85-P0l"/>
+                                <exclude reference="Brk-eb-ayP"/>
+                                <exclude reference="9Yx-Jt-k2b"/>
+                                <exclude reference="BcB-1D-6Fh"/>
+                                <exclude reference="nIS-y8-3UJ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Giy-bj-OSI"/>
+                                <include reference="e4p-Mf-YlG"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="mDi-yK-Jj9"/>
+                                <include reference="xN0-7k-2hq"/>
+                                <include reference="3dp-GB-F7a"/>
+                                <include reference="5Jf-85-P0l"/>
+                                <include reference="Brk-eb-ayP"/>
+                                <include reference="9Yx-Jt-k2b"/>
+                                <include reference="BcB-1D-6Fh"/>
+                                <include reference="nIS-y8-3UJ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="GuestsTableView" destination="e4p-Mf-YlG" id="AAy-K3-8vr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LPZ-Cf-FSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93" y="358"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Login" width="1257" height="2208"/>
+    </resources>
+</document>
